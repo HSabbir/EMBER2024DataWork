@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=71.0.0", "setuptools-scm>=8.3.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "thrember"
+version = "0.1.0"
+description = "EMBER feature version 3"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "lightgbm>=4.5.0",
+    "pefile>=2024.8.26",
+    "polars>=1.8.2",
+    "scikit-learn>=1.5.1",
+    "tqdm>=4.66.5",
+    "signify==0.7.1",
+    "huggingface_hub>=0.32.4",
+    "matplotlib>=3.10.3",
+    "lightgbm>=4.6.0",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+thrember = ["*.txt"]
