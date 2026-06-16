@@ -6,10 +6,11 @@ from sklearn.metrics import roc_auc_score, accuracy_score, classification_report
 import thrember
 
 # 1. Setup paths
-DATA_DIR = "Your Data Directory"
+DATA_DIR = "/Users/hsabbir/Documents/EMBER2024DataWork/data/ELF/"
 
 if __name__ == '__main__':
-    thrember.download_dataset(DATA_DIR)
+    print("Downloading and Vectorizing dataset")
+    thrember.download_dataset(DATA_DIR, file_type="ELF")
 
     thrember.create_vectorized_features(DATA_DIR)
 
